@@ -63,7 +63,7 @@ end
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/ticket-flow.git
+    git clone https://github.com/matheusmoura0/ticket_flow.git
     cd ticket-flow
     ```
 
