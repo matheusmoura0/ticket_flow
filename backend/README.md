@@ -1,24 +1,44 @@
-# README
+# Backend TicketFlow
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este é o backend da aplicação TicketFlow, um sistema de venda de ingressos de alta concorrência.
 
-Things you may want to cover:
+## Stack
+- Ruby 3.x
+- Rails 8.x
+- PostgreSQL
+- Redis / Sidekiq
 
-* Ruby version
+## Configuração
 
-* System dependencies
+1. **Instalar dependências:**
+   ```bash
+   bundle install
+   ```
 
-* Configuration
+2. **Configuração do Banco de Dados:**
+   ```bash
+   rails db:create db:migrate db:seed
+   ```
 
-* Database creation
+3. **Rodar o Servidor:**
+   ```bash
+   bin/rails s
+   ```
 
-* Database initialization
+## Serviços Externos/Internos
+- **Redis**: Necessário para o Sidekiq (processamento de jobs em segundo plano).
 
-* How to run the test suite
+## Documentação da API (Swagger)
 
-* Services (job queues, cache servers, search engines, etc.)
+A API é documentada usando Swagger/OpenAPI.
 
-* Deployment instructions
+### Visualizando a Documentação
+1. Inicie o servidor: `bin/rails s`
+2. Acesse: **[http://localhost:3000/api-docs](http://localhost:3000/api-docs)**
 
-* ...
+### Atualizando a Documentação
+Se você fizer alterações na API, atualize as specs em `spec/requests/api` e gere novamente o arquivo Swagger:
+
+```bash
+rails rswag:specs:swaggerize
+```
