@@ -81,7 +81,11 @@ end
 
 ## 📸 Screenshots
 
-*(Espaço reservado para screenshots da interface do sistema, mostrando a lista de eventos e o mapa de assentos)*
+### Event List
+![Event List](docs/images/event_list.png)
+
+### Seat Map
+![Seat Selection](docs/images/seat_map.png)
 
 ---
 
